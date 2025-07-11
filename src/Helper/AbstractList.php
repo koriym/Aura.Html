@@ -53,7 +53,7 @@ abstract class AbstractList extends AbstractHelper
      * @return self
      *
      */
-    public function __invoke(array $attr = null)
+    public function __invoke($attr = null)
     {
         if ($attr !== null) {
             $this->attr = $attr;

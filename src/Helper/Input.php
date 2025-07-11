@@ -28,7 +28,7 @@ class Input extends HelperLocator
      * @return mixed
      *
      */
-    public function __invoke(array $spec = null)
+    public function __invoke($spec = null)
     {
         if ($spec === null) {
             return $this;
