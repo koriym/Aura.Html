@@ -6,7 +6,7 @@ Provides HTML escapers and helpers, including form input helpers, that can be us
 
 ### Installation
 
-This library requires PHP 5.3 or later  with `mbstring` and/or `iconv` installed; we recommend using the latest available version of PHP as a matter of principle. It has no userland dependencies.
+This library requires PHP 8.0 or later with `mbstring` and/or `iconv` installed; we recommend using the latest available version of PHP as a matter of principle. It has no userland dependencies.
 
 It is installable and autoloadable via Composer as [aura/html](https://packagist.org/packages/aura/html).
 
