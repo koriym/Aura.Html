@@ -162,7 +162,7 @@ class AttrEscaper extends AbstractEscaper
      */
     protected function charIsUndefined($chr)
     {
-        $ord = ord($chr);
+        $ord = ord($chr[0]);
         return ($ord <= 0x1f && $chr != "\t" && $chr != "\n" && $chr != "\r")
               || ($ord >= 0x7f && $ord <= 0x9f);
     }

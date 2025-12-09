@@ -39,7 +39,7 @@ class Styles extends AbstractSeries
      * @return self
      *
      */
-    public function add($href, array $attr = null, $pos = 100)
+    public function add($href, array|null $attr = null, $pos = 100)
     {
         $attr = $this->fixAttr($href, $attr);
         $tag = $this->void('link', $attr);
@@ -64,7 +64,7 @@ class Styles extends AbstractSeries
      * @return self
      *
      */
-    public function addCond($cond, $href, array $attr = null, $pos = 100)
+    public function addCond($cond, $href, array|null $attr = null, $pos = 100)
     {
         $attr = $this->fixAttr($href, $attr);
         $link = $this->void('link', $attr);
@@ -85,7 +85,7 @@ class Styles extends AbstractSeries
      *
      * @access protected
      */
-    protected function style($css, array $attr = null)
+    protected function style($css, array|null $attr = null)
     {
         $attr = $this->fixInternalAttr($attr);
         $attr = $this->escaper->attr($attr);
@@ -103,7 +103,7 @@ class Styles extends AbstractSeries
      *
      * @access public
      */
-    public function addInternal($css, array $attr = null, $pos = 100)
+    public function addInternal($css, array|null $attr = null, $pos = 100)
     {
         $style = $this->style($css, $attr);
         $this->addElement($pos, $style);
@@ -126,7 +126,7 @@ class Styles extends AbstractSeries
      * @return self
      *
      */
-    public function addCondInternal($cond, $css, array $attr = null, $pos = 100)
+    public function addCondInternal($cond, $css, array|null $attr = null, $pos = 100)
     {
         $style = $this->style($css, $attr);
         $cond  = $this->escaper->html($cond);
@@ -146,7 +146,7 @@ class Styles extends AbstractSeries
      *
      * @access public
      */
-    public function beginInternal(array $attr = null, $pos = 100)
+    public function beginInternal(array|null $attr = null, $pos = 100)
     {
         $this->capture[] = array(
             'attr' => $attr,
@@ -167,7 +167,7 @@ class Styles extends AbstractSeries
      *
      * @access public
      */
-    public function beginCondInternal($cond, array $attr = null, $pos = 100)
+    public function beginCondInternal($cond, array|null $attr = null, $pos = 100)
     {
         $this->capture[] = array(
             'attr' => $attr,
@@ -215,7 +215,7 @@ class Styles extends AbstractSeries
      *
      * @access protected
      */
-    protected function fixInternalAttr(array $attr = null)
+    protected function fixInternalAttr(array|null $attr = null)
     {
         $attr = (array) $attr;
 
@@ -241,7 +241,7 @@ class Styles extends AbstractSeries
      * @return array The fixed attributes.
      *
      */
-    protected function fixAttr($href, array $attr = null)
+    protected function fixAttr($href, array|null $attr = null)
     {
         $attr = (array) $attr;
 
